@@ -1,4 +1,5 @@
-<h3>{{model.name}} {{#if model.active}}&#10004;{{/if}}</h3>
+<h3>{{model.name}}</h3>
+<div>{{#if model.active}}Active{{else}}Inactive{{/if}}</div>
 <div>
     <div><a href="tel:{{model.phone}}">{{model.phone}}</a></div>
     <div>
@@ -6,3 +7,8 @@
         {{model.city}}, {{model.state}} {{model.zip}}
     </div>
 </div>
+<ul>
+    {{#each lobbyists as |lobbyist|}}
+        <li>{{#link-to 'lobbyist.by-id' lobbyist}}{{lobbyist.lastName}}{{/link-to}}</li>
+    {{/each}}
+</ul>
