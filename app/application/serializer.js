@@ -7,7 +7,7 @@ export default JSONSerializer.extend({
   },
   extractAttributes(modelClass, resourceHash) {
     for (let attribute in resourceHash) {
-      let camelizedAttribute = Ember.String.camelize(attribute);
+      let camelizedAttribute = attribute.endsWith('_id') ? attribute: Ember.String.camelize(attribute);
       if (attribute !== camelizedAttribute) {
         resourceHash[Ember.String.camelize(attribute)] = resourceHash[attribute];
         delete resourceHash[attribute];
