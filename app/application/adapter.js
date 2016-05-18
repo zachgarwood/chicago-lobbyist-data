@@ -31,7 +31,7 @@ export default DS.Adapter.extend({
       consumer
         .query()
         .withDataset(adapter.get('dataset'))
-        .limit(100)
+        .limit()
         .getRows()
         .on('success', function(data) {
           Ember.run(null, resolve, data);
@@ -41,14 +41,15 @@ export default DS.Adapter.extend({
         });
     });
   },
-  query() {
+  query(store, type, query) {
     let adapter = this;
     return new Ember.RSVP.Promise(function(resolve, reject) {
       let consumer = new Soda.Consumer('data.cityofchicago.org');
       consumer
         .query()
         .withDataset(adapter.get('dataset'))
-        .limit(10)
+        .where(query)
+        .limit()
         .getRows()
         .on('success', function(data) {
           Ember.run(null, resolve, data);
