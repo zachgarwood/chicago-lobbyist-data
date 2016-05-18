@@ -1,8 +1,8 @@
 import { moduleForModel, test } from 'ember-qunit';
 
-moduleForModel('lobbyist', 'Unit | Model | lobbyist', {
+moduleForModel('employer', 'Unit | Model | employer', {
   // Specify the other units that are required for this test.
-  needs: ['model:employer']
+  needs: []
 });
 
 test('it exists', function(assert) {

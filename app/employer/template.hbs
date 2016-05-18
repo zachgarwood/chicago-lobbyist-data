@@ -1,0 +1,5 @@
+<ul>
+    {{#each model as |employer|}}
+        <li>{{#link-to 'employer.by-id' employer}}{{employer.name}}{{/link-to}}</li>
+    {{/each}}
+</ul>

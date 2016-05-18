@@ -1,5 +1,6 @@
 import Model from 'ember-data/model';
 import attr from 'ember-data/attr';
+import { belongsTo } from 'ember-data/relationships';
 
 export default Model.extend({
   address1: attr(),
@@ -7,6 +8,7 @@ export default Model.extend({
   city: attr(),
   createdDate: attr('date'),
   email: attr(),
+  employer: belongsTo('employer', { async: true }),
   employerName: attr(),
   firstName: attr(),
   lastName: attr(),
@@ -16,5 +18,4 @@ export default Model.extend({
   state: attr(),
   suffix: attr(),
   zip: attr(),
-  //employer: belongsTo('employer'),
 });

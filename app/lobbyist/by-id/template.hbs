@@ -1,7 +1,7 @@
 <h3>
     {{model.salutation}} {{model.firstName}} {{model.middleInitial}} {{model.lastName}} {{model.suffix}}
 </h3>
-<h4>{{model.employerName}}</h4>
+<h4>{{#link-to 'employer.by-id' model.employer}}{{model.employerName}}{{/link-to}}</h4>
 <div>
     <div><a href="mailto:{{model.email}}">{{model.email}}</a></div>
     <div><a href="tel:{{model.phone}}">{{model.phone}}</a></div>
