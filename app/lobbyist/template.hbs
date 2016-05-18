@@ -1,0 +1,5 @@
+<ol>
+    {{#each model as |lobbyist|}}
+        <li>{{#link-to 'lobbyist.by-id' lobbyist}}{{lobbyist.firstName}}{{/link-to}}</li>
+    {{/each}}
+</ol>

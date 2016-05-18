@@ -1,0 +1,12 @@
+<h3>
+    {{model.salutation}} {{model.firstName}} {{model.middleInitial}} {{model.lastName}} {{model.suffix}}
+</h3>
+<h4>{{model.employerName}}</h4>
+<div>
+    <div><a href="mailto:{{model.email}}">{{model.email}}</a></div>
+    <div><a href="tel:{{model.phone}}">{{model.phone}}</a></div>
+    <div>
+        {{model.address1}}{{#if model.address2}}, {{model.address2}}{{/if}}<br>
+        {{model.city}}, {{model.state}} {{model.zip}}
+    </div>
+</div>

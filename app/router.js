@@ -6,6 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('lobbyist', function() {
+    this.route('by-id', { path: ':lobbyist_id' });
+  });
 });
 
 export default Router;
