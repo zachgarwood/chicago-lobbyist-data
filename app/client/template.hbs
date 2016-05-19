@@ -1,0 +1,5 @@
+<ul>
+    {{#each model as |client|}}
+        <li>{{#link-to 'client.by-id' client}}{{client.name}}{{/link-to}}</li>
+    {{/each}}
+</ul>

@@ -12,6 +12,9 @@ Router.map(function() {
   this.route('employer', function() {
     this.route('by-id', { path: ':employer_id' });
   });
+  this.route('client', function() {
+    this.route('by-id', { path: ':client_id' });
+  });
 });
 
 export default Router;

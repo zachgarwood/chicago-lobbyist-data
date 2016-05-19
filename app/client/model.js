@@ -8,7 +8,6 @@ export default Model.extend({
   city: attr(),
   createdDate: attr('date'),
   name: attr(),
-  phone: attr(),
   state: attr(),
   zip: attr(),
 });

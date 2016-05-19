@@ -1,0 +1,8 @@
+<h3>{{model.name}}</h3>
+<div>{{#if model.active}}Active{{else}}Inactive{{/if}}</div>
+<div>
+    <div>
+        {{model.address1}}{{#if model.address2}}, {{model.address2}}{{/if}}<br>
+        {{model.city}}, {{model.state}} {{model.zip}}
+    </div>
+</div>
