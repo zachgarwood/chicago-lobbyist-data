@@ -3,7 +3,7 @@ import JSONSerializer from 'ember-data/serializers/json';
 
 export default JSONSerializer.extend({
   extractId(modelClass, resourceHash) {
-    return resourceHash[`${modelClass.modelName}_id`];
+    return resourceHash[`${Ember.String.underscore(modelClass.modelName)}_id`];
   },
   extractAttributes(modelClass, resourceHash) {
     for (let attribute in resourceHash) {
