@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'lobbyist',
+    modulePrefix: 'chicago-lobbyist-data',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

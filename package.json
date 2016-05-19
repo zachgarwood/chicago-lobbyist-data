@@ -1,7 +1,7 @@
 {
-  "name": "lobbyist",
+  "name": "chicago-lobbyist-data",
   "version": "0.0.0",
-  "description": "Small description for lobbyist goes here",
+  "description": "A view at the Chicago open data on lobbyists",
   "private": true,
   "directories": {
     "doc": "doc",
