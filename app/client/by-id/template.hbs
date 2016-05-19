@@ -6,3 +6,15 @@
         {{model.city}}, {{model.state}} {{model.zip}}
     </div>
 </div>
+<ul>
+    {{#each lobbyingActivity as |activity|}}
+        <li>
+            {{activity.action}} -
+            {{activity.actionSought}} -
+            {{activity.department}} -
+            {{#link-to 'lobbyist.by-id' activity.lobbyist}}
+                {{activity.lobbyistLastName}}
+            {{/link-to}}
+        </li>
+    {{/each}}
+</ul>

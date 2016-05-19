@@ -6,7 +6,11 @@ export default Ember.Route.extend({
   },
   setupController(controller, model) {
     this._super(...arguments);
-    Ember.set(controller, 'lobbyists', this.store.query('lobbyist', { 'employer_id': model.get('id') }));
+    Ember.set(
+      controller,
+      'lobbyists',
+      this.store.query('lobbyist', { 'employer_id': model.get('id') })
+    );
   },
   renderTemplate() {
     this.render('employer.by-id', {

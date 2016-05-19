@@ -10,3 +10,15 @@
         {{model.city}}, {{model.state}} {{model.zip}}
     </div>
 </div>
+<ul>
+    {{#each lobbyingActivity as |activity|}}
+        <li>
+            {{activity.action}} -
+            {{activity.actionSought}} -
+            {{activity.department}} -
+            {{#link-to 'client.by-id' activity.client}}
+                {{activity.clientName}}
+            {{/link-to}}
+        </li>
+    {{/each}}
+</ul>
